@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-zinc-300 font-sans antialiased selection:bg-indigo-500/30 selection:text-indigo-200 overflow-x-hidden;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Premium SaaS Card System (Linear/Vercel Style) */
+.card-panel {
+  @apply bg-zinc-900/50 border border-zinc-800 rounded-xl transition-all duration-200;
+}
+
+.card-panel-interactive {
+  @apply card-panel hover:bg-zinc-900 hover:border-zinc-700 cursor-pointer;
+}
+
+/* Form Inputs (Stripe / Vercel style) */
+.saas-input {
+  @apply bg-zinc-950 border border-zinc-800 text-zinc-100 text-sm rounded-lg py-2 px-3 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all placeholder:text-zinc-600;
+}
+
+.saas-select {
+  @apply saas-input pr-8 appearance-none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2371717a' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.25em 1.25em;
+}
+
+/* Clean compact scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-zinc-950;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-800 rounded-md hover:bg-zinc-700;
+}
+
+/* Typography styles */
+.sec-heading {
+  @apply text-zinc-100 font-semibold tracking-tight;
+}
+
+.saas-badge {
+  @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium border;
+}
